@@ -7,10 +7,12 @@ Todo
 
 """
 
-from calendrierF import bioupasbi,nbjours
+from calendrierF import bioupasbi, nbjours, Sdate
 
 
 a=bioupasbi(1000)
 print()
 print(a)
-nbjours("Juin",2023)
+nbjours(5,2023)
+
+Sdate()
