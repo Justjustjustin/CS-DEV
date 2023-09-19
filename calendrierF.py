@@ -43,21 +43,30 @@ def nbjours(Mois, Annee=1200):
     while Mois not in range(1,13):
         Mois=int(input("mettez un mois correct: "))
     if Mois in M31:
-        print("31")
+        return 31
     elif Mois in M30:
-        print("30")
+        return 30
     elif bioupasbi(Annee)==True:
-        print("29")
+        return 29
     else:
-        print('28')
-    return
+        return 28
+    
 
 def Sdate ():
-    date= input("saisissez la date sous la forme JJ/MM/AAAA")
+    """
+    cette fonction demande la date, verifie sa validité et l'affiche
+    """
+    date= input("saisissez la date sous la forme JJ/MM/AAAA: ")
     J,M,A= date.split("/")
     J,M,A=int(J),int(M),int(A)
-    while J not in range(1,32) and M not in range(1,13):
-        J=int(input("saisissez un jour valide:"))
-        M= int(input("saisissez un mois valide:"))
+    
+    testAnnee=bioupasbi(A)
+    nbJ=nbjours(M,A)
 
-    print ("le "+str(J)+" "+MD[M]+" "+str(A))
+    if J in range(1,nbJ+1) and M in range(1,13):
+        return "le "+str(J)+" "+MD[M]+" "+str(A)
+    else:
+        return False
+    
+    
+    
