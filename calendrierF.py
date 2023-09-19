@@ -30,7 +30,8 @@ def bioupasbi(Annee):
 def nbjours(Mois, Annee=1200):
     
     
-    """Écrire le programme principal qui propose la saisie d'une date, la valide et affiche le message "date
+    """
+    Écrire le programme principal qui propose la saisie d'une date, la valide et affiche le message "date
     Cette fonction revoie le nombre de jour du moi demandé
     pour le moi de fevier, si on oublie de préciser l'année a fonction revoie la valeur pour une année bissextile,
     

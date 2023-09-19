@@ -10,6 +10,8 @@ Todo
 Seuils=[10255, 26071, 74545, 160336]
 
 def mesImpots(revenu):
+    """cette fonction permet de calculer la somme totale que quelqu'un doit payer en fonction de son revenu"""
+    
     total=0
     if revenu >= 160336:
         total= (revenu-160336)*0.45
@@ -19,7 +21,6 @@ def mesImpots(revenu):
         revenu=74545
     if revenu >= 26071:
         total=total+(revenu-26071)*0.30
-        print (total)
         revenu=26070
     if revenu >= 10256:
         total=total+ (revenu-10256)*0.11

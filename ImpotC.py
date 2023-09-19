@@ -10,4 +10,4 @@ Todo
 
 from ImpotF import mesImpots
 
-print(mesImpots(50000))
+print(mesImpots(40000))
